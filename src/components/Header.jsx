@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <>
@@ -7,8 +9,8 @@ const Header = () => {
 
         {/* right div for logo */}
         <div className="rightAction">
-          <span>Home</span>
-          <span>Services</span>
+          <Link to={"/"}>Home</Link>
+          <Link to={"/services"}> Services</Link>
           <span>Contact Us</span>
         </div>
       </div>
