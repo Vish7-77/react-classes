@@ -12,6 +12,10 @@
   justify-content: space-between;
 }
 
+.mainRightCont {
+  width: 100%;
+}
+
 .myLogo {
   width: 200px;
   display: flex;
@@ -60,8 +64,7 @@
   border: 2px solid rgb(93, 93, 93);
 }
 
-
-.card{
+.card {
   width: 300px;
   height: 300px;
   padding: 22px;
@@ -69,13 +72,70 @@
   margin: 10px;
 }
 
-.cardImage{
+.cardImage {
   width: 100%;
 }
 
-.flexDispay{
+.flexDisplay {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.cardDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.servicesdiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.incDiv {
+  width: 300px;
+  height: 500px;
+
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+  align-items: center;
+}
+
+.incDiv > img {
+  width: 100%;
+  height: 70%;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 12px;
+  margin-right: 12px;
+  color: wheat;
+}
+.numberSpan {
+  font-size: 44px;
+  font-weight: bold;
+  color: wheat;
+}
+
+.buttonDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+.buttonDiv > button {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }

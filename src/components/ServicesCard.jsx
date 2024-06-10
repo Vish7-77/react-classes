@@ -1,3 +1,5 @@
+
+// the title description and image are the props 
 const ServicesCard = ({ title, desc ,image}) => {
   return (
     <>
