@@ -34,7 +34,7 @@ const Card = ({ title, description }) => {
           >
             plus
           </button>
-          <h2 class="text-4xl font-extrabold dark:text-white">{number}</h2>
+          <h2 className="text-4xl font-extrabold dark:text-white">{number}</h2>
           <button
             onClick={dec}
             type="button"
