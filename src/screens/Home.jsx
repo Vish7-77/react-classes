@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
-import Card from "../components/Card";
+// import Card from "../components/Card";
 import Header from "../components/Header";
 import axios from "axios";
+import CreateUserForm from "../components/CreateUserForm";
+import Table from "../components/Table";
 
 const Home = () => {
   const [data, setData] = useState([]);
   const [inputValue, setInput] = useState("");
 
   const getAllData = async () => {
-    const data = await axios.get("https://dummyjson.com/products");
-    setData(data.data.products);
+    const data = await axios.get("/api/users");
+    setData(data.data.users);
   };
 
   const handleSubmit = () => {
@@ -28,19 +30,9 @@ const Home = () => {
 
   return (
     <>
-      <div className="w-full h-screen flex-col flex ">
-        <Header
-          handleSubmit={handleSubmit}
-          inputValue={inputValue}
-          setInput={setInput}
-        />
-        <div className="p-10"></div>
+      <div className="w-full flex-col flex ">
         <div className="flex w-full flex-wrap h-fit ">
-          {/* mapping is nothing but looping through an array */}
-          {data.map((ele) => (
-            // eslint-disable-next-line react/jsx-key
-            <Card title={ele.title} description={ele.description} />
-          ))}
+          Home
         </div>
       </div>
     </>
