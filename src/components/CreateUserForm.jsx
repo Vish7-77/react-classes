@@ -2,11 +2,11 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const CreateUserForm = () => {
+const CreateUserForm = ({ setIsLOggedIn }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  
+
   const handleSubmit = async (e) => {
     // this will prevent to refresh the form
     e.preventDefault();
@@ -15,7 +15,11 @@ const CreateUserForm = () => {
         username: email,
         password,
       });
+      // set the token in localstorage -- which will be in browser
       localStorage.setItem("token", response.data.token);
+
+      // this is the state of your APP 
+      setIsLOggedIn(response.data.token);
       navigate("/home");
     } catch (error) {
       console.log(error.response.data.message);
